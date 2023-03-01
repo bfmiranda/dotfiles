@@ -3,7 +3,13 @@
 BASEDIR=$(dirname "$0")
 cd $BASEDIR
 
-git pull
+echo_title '
+--------------------------------------------
+Atualizando repos, se já estiver instalado 
+--------------------------------------------
+'
+# git pull
+gh repo sync
 
 echo_title() {
     echo '
