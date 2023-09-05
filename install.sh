@@ -3,13 +3,7 @@
 BASEDIR=$(dirname "$0")
 cd $BASEDIR
 
-echo_title '
---------------------------------------------
-Atualizando repos, se já estiver instalado 
---------------------------------------------
-'
-# git pull
-gh repo sync
+git pull
 
 echo_title() {
     echo '
@@ -140,7 +134,6 @@ taskvscode() {
 
 if [ $# -eq 0 ]; then
     taskshell
-    tasksnap
     taskterminator
     tasktmux
     taskzsh
